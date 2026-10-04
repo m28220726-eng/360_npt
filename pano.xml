@@ -10,7 +10,7 @@
     <view fovmode="1" pannorth="0">
       <start fov="120" pan="0" projection="4" tilt="0"/>
       <flyin fov="170" pan="0" projection="9" tilt="-90"/>
-      <min fovpixel="0.01" pan="0" tilt="-90"/>
+      <min fov="0" pan="0" tilt="-90"/>
       <max fov="120" fovfisheye="360" fovstereographic="270" pan="360" scaletofit="0" tilt="90"/>
     </view>
     <hotspots>
@@ -29,7 +29,7 @@
     <view fovmode="1" pannorth="0">
       <start fov="120" pan="-4.63" projection="4" tilt="-0.51"/>
       <flyin fov="170" pan="0" projection="9" tilt="-90"/>
-      <min fovpixel="0.01" pan="0" tilt="-90"/>
+      <min fov="0" pan="0" tilt="-90"/>
       <max fov="120" fovfisheye="360" fovstereographic="270" pan="360" scaletofit="0" tilt="90"/>
     </view>
     <hotspots>
@@ -49,7 +49,7 @@
     <view fovmode="1" pannorth="0">
       <start fov="120" pan="1.71" projection="4" tilt="0"/>
       <flyin fov="170" pan="0" projection="9" tilt="-90"/>
-      <min fovpixel="0.1" pan="0" tilt="-90"/>
+      <min fov="0" pan="0" tilt="-90"/>
       <max fov="120" fovfisheye="360" fovstereographic="270" pan="360" scaletofit="0" tilt="90"/>
     </view>
     <hotspots>
@@ -70,7 +70,7 @@
     <view fovmode="1" pannorth="0">
       <start fov="140" pan="-5.03" projection="4" tilt="0.68"/>
       <flyin fov="170" pan="0" projection="9" tilt="-90"/>
-      <min fovpixel="0.01" pan="0" tilt="-90"/>
+      <min fov="0" pan="0" tilt="-90"/>
       <max fov="120" fovfisheye="360" fovstereographic="270" pan="360" scaletofit="0" tilt="90"/>
     </view>
     <hotspots>
@@ -92,7 +92,7 @@
     <view fovmode="1" pannorth="0">
       <start fov="130" pan="-19.24" projection="4" tilt="-2.78"/>
       <flyin fov="170" pan="0" projection="9" tilt="-90"/>
-      <min fovpixel="0.01" pan="0" tilt="-90"/>
+      <min fov="0" pan="0" tilt="-90"/>
       <max fov="120" fovfisheye="360" fovstereographic="270" pan="360" scaletofit="0" tilt="90"/>
     </view>
     <hotspots>
@@ -112,7 +112,7 @@
     <view fovmode="1" pannorth="0">
       <start fov="140" pan="4.99" projection="4" tilt="1.08"/>
       <flyin fov="170" pan="0" projection="9" tilt="-90"/>
-      <min fovpixel="0.01" pan="0" tilt="-90"/>
+      <min fov="0" pan="0" tilt="-90"/>
       <max fov="120" fovfisheye="360" fovstereographic="270" pan="360" scaletofit="0" tilt="90"/>
     </view>
     <hotspots>
@@ -131,7 +131,7 @@
     <view fovmode="1" pannorth="0">
       <start fov="140" pan="-145.97" projection="4" tilt="-0.35"/>
       <flyin fov="170" pan="0" projection="9" tilt="-90"/>
-      <min fovpixel="0.01" pan="0" tilt="-90"/>
+      <min fov="0" pan="0" tilt="-90"/>
       <max fov="120" fovfisheye="360" fovstereographic="270" pan="360" scaletofit="0" tilt="90"/>
     </view>
     <hotspots>
@@ -152,7 +152,7 @@
     <view fovmode="1" pannorth="0">
       <start fov="140" pan="-3.08" projection="4" tilt="-1.85"/>
       <flyin fov="170" pan="0" projection="9" tilt="-90"/>
-      <min fovpixel="0.01" pan="0" tilt="-90"/>
+      <min fov="0" pan="0" tilt="-90"/>
       <max fov="120" fovfisheye="360" fovstereographic="270" pan="360" scaletofit="0" tilt="90"/>
     </view>
     <hotspots>
@@ -171,7 +171,7 @@
     <view fovmode="1" pannorth="0">
       <start fov="130" pan="15.52" projection="4" tilt="-0.63"/>
       <flyin fov="170" pan="0" projection="9" tilt="-90"/>
-      <min fovpixel="0.01" pan="0" tilt="-90"/>
+      <min fov="0" pan="0" tilt="-90"/>
       <max fov="120" fovfisheye="360" fovstereographic="270" pan="360" scaletofit="0" tilt="90"/>
     </view>
     <hotspots>
@@ -190,7 +190,7 @@
     <view fovmode="1" pannorth="0">
       <start fov="130" pan="94.05" projection="4" tilt="-1.31"/>
       <flyin fov="170" pan="0" projection="9" tilt="-90"/>
-      <min fovpixel="0.01" pan="0" tilt="-90"/>
+      <min fov="0" pan="0" tilt="-90"/>
       <max fov="120" fovfisheye="360" fovstereographic="270" pan="360" scaletofit="0" tilt="90"/>
     </view>
     <hotspots>
@@ -211,7 +211,7 @@
     <view fovmode="1" pannorth="0">
       <start fov="130" pan="69.34" projection="4" tilt="1.07"/>
       <flyin fov="170" pan="0" projection="9" tilt="-90"/>
-      <min fovpixel="0.01" pan="0" tilt="-90"/>
+      <min fov="0" pan="0" tilt="-90"/>
       <max fov="120" fovfisheye="360" fovstereographic="270" pan="360" scaletofit="0" tilt="90"/>
     </view>
     <hotspots>
@@ -231,7 +231,7 @@
     <view fovmode="1" pannorth="0">
       <start fov="130" pan="0.64" projection="4" tilt="-5.83"/>
       <flyin fov="170" pan="0" projection="9" tilt="-90"/>
-      <min fovpixel="0.01" pan="0" tilt="-90"/>
+      <min fov="0" pan="0" tilt="-90"/>
       <max fov="120" fovfisheye="360" fovstereographic="270" pan="360" scaletofit="0" tilt="90"/>
     </view>
     <hotspots>
@@ -252,7 +252,7 @@
     <view fovmode="1" pannorth="0">
       <start fov="140" pan="41.3" projection="4" tilt="-2.68"/>
       <flyin fov="170" pan="0" projection="9" tilt="-90"/>
-      <min fovpixel="0.01" pan="0" tilt="-90"/>
+      <min fov="0" pan="0" tilt="-90"/>
       <max fov="120" fovfisheye="360" fovstereographic="270" pan="360" scaletofit="0" tilt="90"/>
     </view>
     <hotspots>
@@ -271,7 +271,7 @@
     <view fovmode="1" pannorth="0">
       <start fov="130" pan="26.4" projection="4" tilt="-2.11"/>
       <flyin fov="130" pan="35.76" projection="4" tilt="-0.14"/>
-      <min fovpixel="0.01" pan="0" tilt="-90"/>
+      <min fov="0" pan="0" tilt="-90"/>
       <max fov="120" fovfisheye="360" fovstereographic="270" pan="360" scaletofit="0" tilt="90"/>
     </view>
     <hotspots>
@@ -291,7 +291,7 @@
     <view fovmode="1" pannorth="0">
       <start fov="130" pan="-39.02" projection="4" tilt="1.72"/>
       <flyin fov="100" pan="0" projection="4" tilt="0"/>
-      <min fovpixel="0.01" pan="0" tilt="-90"/>
+      <min fov="0" pan="0" tilt="-90"/>
       <max fov="120" fovfisheye="360" fovstereographic="270" pan="360" scaletofit="0" tilt="90"/>
     </view>
     <hotspots>
@@ -310,7 +310,7 @@
     <view fovmode="1" pannorth="0">
       <start fov="130" pan="130.34" projection="4" tilt="-1.67"/>
       <flyin fov="170" pan="0" projection="9" tilt="-90"/>
-      <min fovpixel="0.01" pan="0" tilt="-90"/>
+      <min fov="0" pan="0" tilt="-90"/>
       <max fov="120" fovfisheye="360" fovstereographic="270" pan="360" scaletofit="0" tilt="90"/>
     </view>
     <hotspots>
@@ -321,7 +321,7 @@
     <animation animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0" useinautorotation="0"/>
   </panorama>
   <masternode>
-    <userdata author="" comment="" copyright="" description="" tags="" title="" uuid="{fb9c8be4-08e5-40ec-a213-eabc5eedcf4f}"/>
+    <userdata author="" comment="" copyright="" description="" tags="" title="" uuid="{7470bf44-cd16-4c45-b8e1-42437a6685ab}"/>
     <autorotate delay="8.00" enabled="1" horizonfromdefview="0" nodedelay="0.00" nodefilter="" noderandom="1" returntohorizon="0.000" speed="0.050" startloaded="0" useanimation="0"/>
     <transition blendcolor="0x000000" blendtime="1" delay="none" enabled="1" softedge="0" type="crossdissolve" zoomafterinfov="140" zoomafteroutfov="40" zoomfov="40" zoomin="0" zoomout="0" zoomoutpause="1" zoomspeed="2"/>
     <control contextfullscreen="1" contextprojections="0" contextvr="1" dblclickfullscreen="0" hideabout="0" invertcontrol="1" invertwheel="0" lockedkeyboard="0" lockedkeyboardzoom="0" lockedmouse="0" lockedwheel="0" rubberband="0" sensitivity="8" simulatemass="1" speedwheel="1" zoomcentercursor="1"/>
