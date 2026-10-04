@@ -1,0 +1,33 @@
+#. Skin Variable: opt_theme / Initial Value
+msgid "#4FB5C2"
+msgstr ""
+
+#. Skin Element: ht_image_container / Set Value Action (Target Element: popup_image) / External Image
+#. Skin Element: ht_image_container / Set Value Action (Target Element: image_popup_phone) / External Image
+#. Skin Element: ht_pdf_container / Set Value Action (Target Element: popup_pdf) / PDF File
+#. Skin Element: ht_pdf_container / Set Value Action (Target Element: pdf_popup_phone) / PDF File
+#. Skin Element: ht_video_file_container / Set Value Action (Target Element: video_file_popup) / Video File
+#. Skin Element: ht_video_file_container / Set Value Action (Target Element: video_file_popup_phone) / Video File
+msgid "%1%2"
+msgstr ""
+
+#. Skin Element External: ht_image_custom_image / URL
+#. Skin Element External: ht_info_custom_image / URL
+#. Skin Element External: ht_node_custom_image / URL
+#. Skin Element External: ht_pdf_custom_image / URL
+#. Skin Element External: ht_url_custom_image / URL
+#. Skin Element External: ht_video_file_custom_image / URL
+#. Skin Element External: ht_video_url_custom_image / URL
+#. Skin Element External: ht_video_vimeo_custom_image / URL
+#. Skin Element External: ht_video_youtube_custom_image / URL
+msgid "_custom"
+msgstr ""
+
+#. Skin Element: ht_url_container / Set Value Action (Target Element: url_popup_iframe) / Text
+msgid "<iframe src=\"%1\" width=\"100%\" height=\"100%\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\" frameborder= \"0\" ></iframe>"
+msgstr ""
+
+#. Skin Element Text: share_title / Text
+msgid "Share"
+msgstr ""
+
