@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 8.0.2/22555
-// Filename: NPT.ggsk
-// Generated 2026-10-06T13:29:12Z
+// Filename: 
+// Generated 2026-10-06T13:54:29Z
 
 function pano2vrSkin(player,base) {
 	player.addVariable('vis_sounds_splashscreen', 2, false, { ignoreInState: 1  });
@@ -3360,9 +3360,9 @@ navigator.share({ url: shareUrl });
 		hs+='background : rgba(0,0,0,0.705882);';
 		hs+='border : 0px solid #000000;';
 		hs+='border-radius : 25px 25px 0px 0px;';
-		hs+='bottom : -297px;';
+		hs+='bottom : -322px;';
 		hs+='cursor : default;';
-		hs+='height : 315px;';
+		hs+='height : 340px;';
 		hs+='left : calc(50% - ((52px + 0px) / 2) + 0px);';
 		hs+='position : absolute;';
 		hs+='visibility : hidden;';
@@ -3465,7 +3465,7 @@ navigator.share({ url: shareUrl });
 					deltaY += 25;
 				}
 					me._menu_right_slider.style.left = 'calc(50% - (52px / 2) - (0px / 2) + ' + (0+deltaX) + 'px)';
-					me._menu_right_slider.style.bottom=(-297+deltaY) + 'px';
+					me._menu_right_slider.style.bottom=(-322+deltaY) + 'px';
 			}
 		}
 		me._menu_right_slider.logicBlock_visible = function() {
@@ -4638,7 +4638,7 @@ navigator.share({ url: shareUrl });
 		hs+='left : calc(50% - ((36px + 0px) / 2) + 0px);';
 		hs+='opacity : 0;';
 		hs+='position : absolute;';
-		hs+='top : 0px;';
+		hs+='top : 16px;';
 		hs+='visibility : hidden;';
 		hs+='width : 36px;';
 		hs+='pointer-events:none;';
@@ -4671,7 +4671,7 @@ navigator.share({ url: shareUrl });
 					deltaY += 45;
 				}
 					me._toggle_autorotate.style.left = 'calc(50% - (36px / 2) - (0px / 2) + ' + (0+deltaX) + 'px)';
-					me._toggle_autorotate.style.top=(0+deltaY) + 'px';
+					me._toggle_autorotate.style.top=(16+deltaY) + 'px';
 			}
 		}
 		me._toggle_autorotate.logicBlock_alpha = function() {
@@ -5291,8 +5291,8 @@ navigator.share({ url: shareUrl });
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
 		el.ggId="tip_set";
-		el.ggDx=-49;
-		el.ggDy=-56;
+		el.ggDx=-104;
+		el.ggDy=2;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=false;
 		el.className="ggskin ggskin_text ";
@@ -5304,9 +5304,9 @@ navigator.share({ url: shareUrl });
 		hs+='border-radius : 25px;';
 		hs+='color : rgba(255,255,255,0.901961);';
 		hs+='height : 50px;';
-		hs+='left : calc(50% - ((150px + 0px) / 2) - 49px);';
+		hs+='left : calc(50% - ((150px + 0px) / 2) - 104px);';
 		hs+='position : absolute;';
-		hs+='top : calc(50% - ((50px + 0px) / 2) - 56px);';
+		hs+='top : calc(50% - ((50px + 0px) / 2) + 2px);';
 		hs+='visibility : hidden;';
 		hs+='width : 150px;';
 		hs+='pointer-events:auto;';
@@ -5356,8 +5356,8 @@ navigator.share({ url: shareUrl });
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
 		el.ggId="tip_full_scr";
-		el.ggDx=-109;
-		el.ggDy=-56;
+		el.ggDx=-104;
+		el.ggDy=-107;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=false;
 		el.className="ggskin ggskin_text ";
@@ -5369,9 +5369,9 @@ navigator.share({ url: shareUrl });
 		hs+='border-radius : 25px;';
 		hs+='color : rgba(255,255,255,0.901961);';
 		hs+='height : 50px;';
-		hs+='left : calc(50% - ((150px + 0px) / 2) - 109px);';
+		hs+='left : calc(50% - ((150px + 0px) / 2) - 104px);';
 		hs+='position : absolute;';
-		hs+='top : calc(50% - ((50px + 0px) / 2) - 56px);';
+		hs+='top : calc(50% - ((50px + 0px) / 2) - 107px);';
 		hs+='visibility : hidden;';
 		hs+='width : 150px;';
 		hs+='pointer-events:auto;';
@@ -5421,8 +5421,8 @@ navigator.share({ url: shareUrl });
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
 		el.ggId="tip_rotate";
-		el.ggDx=-109;
-		el.ggDy=-110;
+		el.ggDx=-104;
+		el.ggDy=-161;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=false;
 		el.className="ggskin ggskin_text ";
@@ -5434,9 +5434,9 @@ navigator.share({ url: shareUrl });
 		hs+='border-radius : 25px;';
 		hs+='color : rgba(255,255,255,0.901961);';
 		hs+='height : 50px;';
-		hs+='left : calc(50% - ((150px + 0px) / 2) - 109px);';
+		hs+='left : calc(50% - ((150px + 0px) / 2) - 104px);';
 		hs+='position : absolute;';
-		hs+='top : calc(50% - ((50px + 0px) / 2) - 110px);';
+		hs+='top : calc(50% - ((50px + 0px) / 2) - 161px);';
 		hs+='visibility : hidden;';
 		hs+='width : 150px;';
 		hs+='pointer-events:auto;';
