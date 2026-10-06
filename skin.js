@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 8.0.2/22555
-// Filename: 
-// Generated 2026-10-06T13:54:29Z
+// Filename: NPT.ggsk
+// Generated 2026-10-06T15:05:58Z
 
 function pano2vrSkin(player,base) {
 	player.addVariable('vis_sounds_splashscreen', 2, false, { ignoreInState: 1  });
@@ -3296,7 +3296,8 @@ navigator.share({ url: shareUrl });
 		me._menu_right.logicBlock_visible = function() {
 			var newLogicStateVisible;
 			if (
-				((player.getVariableValue('vis_skin') == true))
+				((player.getVariableValue('vis_skin') == true)) && 
+				((player.getIsMobile() == false))
 			)
 			{
 				newLogicStateVisible = 0;
