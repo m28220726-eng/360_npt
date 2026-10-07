@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 8.0.2/22555
-// Filename: NPT.ggsk
-// Generated 2026-10-07T15:17:26Z
+// Filename: 
+// Generated 2026-10-07T15:43:09Z
 
 function pano2vrSkin(player,base) {
 	player.addVariable('vis_sounds_splashscreen', 2, false, { ignoreInState: 1  });
@@ -12851,20 +12851,20 @@ alert("The current view has been copied.");
 		me.divSkin.appendChild(me._local_fonts);
 		el=me._container_1=document.createElement('div');
 		el.ggId="Container 1";
-		el.ggDx=-18;
-		el.ggDy=8;
+		el.ggDx=0;
+		el.ggDy=0;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=false;
 		el.className="ggskin ggskin_container ";
 		el.ggType='container';
 		el.userData=el;
 		hs ='';
-		hs+='height : 2.5%;';
-		hs+='left : calc(50% - ((8.33333% + 0px) / 2) - 18px);';
+		hs+='height : 100%;';
+		hs+='left : calc(50% - ((100% + 0px) / 2) + 0px);';
 		hs+='position : absolute;';
-		hs+='top : calc(50% - ((2.5% + 0px) / 2) + 8px);';
+		hs+='top : calc(50% - ((100% + 0px) / 2) + 0px);';
 		hs+='visibility : hidden;';
-		hs+='width : 8.33333%;';
+		hs+='width : 100%;';
 		hs+='pointer-events:none;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
@@ -12902,23 +12902,23 @@ alert("The current view has been copied.");
 		}
 		el=me._rectangle_1=document.createElement('div');
 		el.ggId="Rectangle 1";
-		el.ggDx=-7;
-		el.ggDy=-7;
+		el.ggDx=0;
+		el.ggDy=0;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_rectangle ";
 		el.ggType='rectangle';
 		el.userData=el;
 		hs ='';
-		hs+='background : #ffffff;';
-		hs+='border : 1px solid #000000;';
+		hs+='background : rgba(0,0,0,0.392157);';
+		hs+='border : 0px solid #000000;';
 		hs+='cursor : default;';
-		hs+='height : 3970%;';
-		hs+='left : calc(50% - ((1149% + 2px) / 2) - 7px);';
+		hs+='height : 100%;';
+		hs+='left : calc(50% - ((100% + 0px) / 2) + 0px);';
 		hs+='position : absolute;';
-		hs+='top : calc(50% - ((3970% + 2px) / 2) - 7px);';
+		hs+='top : calc(50% - ((100% + 0px) / 2) + 0px);';
 		hs+='visibility : inherit;';
-		hs+='width : 1149%;';
+		hs+='width : 100%;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
@@ -12933,53 +12933,37 @@ alert("The current view has been copied.");
 		}
 		me._rectangle_1.ggUpdatePosition=function (useTransition) {
 		}
-		el=me._text_1=document.createElement('div');
-		els=me._text_1__text=document.createElement('div');
-		el.className='ggskin ggskin_textdiv';
-		el.ggTextDiv=els;
-		el.ggId="Text 1";
-		el.ggDx=8;
-		el.ggDy=8;
+		me._container_1.appendChild(me._rectangle_1);
+		el=me._lottie_1=document.createElement('div');
+		el.ggLottie = lottie.loadAnimation({
+			container: el,
+			path: basePath + 'images/lottie_1.json',
+			autoplay: true,
+			loop: 0,
+			rendererSettings: {
+				preserveAspectRatio: 'xMinYMin meet'
+			}
+		});
+		el.ggId="Lottie 1";
+		el.ggDx=0;
+		el.ggDy=0;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=true;
-		el.className="ggskin ggskin_text ";
-		el.ggType='text';
+		el.className="ggskin ggskin_lottie ";
+		el.ggType='lottie';
 		el.userData=el;
 		hs ='';
-		hs+='background : #ffffff;';
-		hs+='border : 1px solid #000000;';
-		hs+='color : #000000;';
-		hs+='cursor : default;';
-		hs+='height : 20px;';
-		hs+='left : calc(50% - ((100px + 2px) / 2) + 8px);';
+		hs+='background : rgba(0,0,0,0);';
+		hs+='height : 300px;';
+		hs+='left : calc(50% - ((300px + 0px) / 2) + 0px);';
 		hs+='position : absolute;';
-		hs+='top : calc(50% - ((20px + 2px) / 2) + 8px);';
+		hs+='top : calc(50% - ((300px + 0px) / 2) + 0px);';
 		hs+='visibility : inherit;';
-		hs+='width : 100px;';
+		hs+='width : 300px;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
-		hs='';
-		hs+='box-sizing: border-box;';
-		hs+='width: 100%;';
-		hs+='height: 100%;';
-		hs+='text-align: center;';
-		hs+='white-space: pre;';
-		hs+='padding: 0px;';
-		hs+='overflow: hidden;';
-		els.setAttribute('style',hs);
-		me._text_1.ggUpdateText=function() {
-			var params = [];
-			var hs = player._("text", params);
-			if (hs!=this.ggText) {
-				this.ggText=hs;
-				this.ggTextDiv.innerHTML=hs;
-				if (this.ggUpdatePosition) this.ggUpdatePosition();
-			}
-		}
-		me._text_1.ggUpdateText();
-		el.appendChild(els);
-		me._text_1.ggIsActive=function() {
+		me._lottie_1.ggIsActive=function() {
 			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
 				return this.parentNode.ggIsActive();
 			}
@@ -12988,10 +12972,9 @@ alert("The current view has been copied.");
 		el.ggElementNodeId=function() {
 			return player.getCurrentNode();
 		}
-		me._text_1.ggUpdatePosition=function (useTransition) {
+		me._lottie_1.ggUpdatePosition=function (useTransition) {
 		}
-		me._rectangle_1.appendChild(me._text_1);
-		me._container_1.appendChild(me._rectangle_1);
+		me._container_1.appendChild(me._lottie_1);
 		me.divSkin.appendChild(me._container_1);
 		me._menu_left.logicBlock_visible();
 		me._menu_left_slider.logicBlock_position();
