@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 8.0.2/22555
-// Filename: 
-// Generated 2026-10-07T09:51:59Z
+// Filename: NPT.ggsk
+// Generated 2026-10-07T15:17:26Z
 
 function pano2vrSkin(player,base) {
 	player.addVariable('vis_sounds_splashscreen', 2, false, { ignoreInState: 1  });
@@ -12849,6 +12849,150 @@ alert("The current view has been copied.");
 		me._local_fonts.ggUpdatePosition=function (useTransition) {
 		}
 		me.divSkin.appendChild(me._local_fonts);
+		el=me._container_1=document.createElement('div');
+		el.ggId="Container 1";
+		el.ggDx=-18;
+		el.ggDy=8;
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
+		el.ggVisible=false;
+		el.className="ggskin ggskin_container ";
+		el.ggType='container';
+		el.userData=el;
+		hs ='';
+		hs+='height : 2.5%;';
+		hs+='left : calc(50% - ((8.33333% + 0px) / 2) - 18px);';
+		hs+='position : absolute;';
+		hs+='top : calc(50% - ((2.5% + 0px) / 2) + 8px);';
+		hs+='visibility : hidden;';
+		hs+='width : 8.33333%;';
+		hs+='pointer-events:none;';
+		el.setAttribute('style',hs);
+		el.style.transformOrigin='50% 50%';
+		me._container_1.ggIsActive=function() {
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			return player.getCurrentNode();
+		}
+		me._container_1.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getIsLoading() == true))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._container_1.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._container_1.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._container_1.style.transition='';
+				if (me._container_1.ggCurrentLogicStateVisible == 0) {
+					me._container_1.style.visibility=(Number(me._container_1.style.opacity)>0||!me._container_1.style.opacity)?'inherit':'hidden';
+					me._container_1.ggVisible=true;
+				}
+				else {
+					me._container_1.style.visibility="hidden";
+					me._container_1.ggVisible=false;
+				}
+			}
+		}
+		me._container_1.ggUpdatePosition=function (useTransition) {
+		}
+		el=me._rectangle_1=document.createElement('div');
+		el.ggId="Rectangle 1";
+		el.ggDx=-7;
+		el.ggDy=-7;
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_rectangle ";
+		el.ggType='rectangle';
+		el.userData=el;
+		hs ='';
+		hs+='background : #ffffff;';
+		hs+='border : 1px solid #000000;';
+		hs+='cursor : default;';
+		hs+='height : 3970%;';
+		hs+='left : calc(50% - ((1149% + 2px) / 2) - 7px);';
+		hs+='position : absolute;';
+		hs+='top : calc(50% - ((3970% + 2px) / 2) - 7px);';
+		hs+='visibility : inherit;';
+		hs+='width : 1149%;';
+		hs+='pointer-events:auto;';
+		el.setAttribute('style',hs);
+		el.style.transformOrigin='50% 50%';
+		me._rectangle_1.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			return player.getCurrentNode();
+		}
+		me._rectangle_1.ggUpdatePosition=function (useTransition) {
+		}
+		el=me._text_1=document.createElement('div');
+		els=me._text_1__text=document.createElement('div');
+		el.className='ggskin ggskin_textdiv';
+		el.ggTextDiv=els;
+		el.ggId="Text 1";
+		el.ggDx=8;
+		el.ggDy=8;
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_text ";
+		el.ggType='text';
+		el.userData=el;
+		hs ='';
+		hs+='background : #ffffff;';
+		hs+='border : 1px solid #000000;';
+		hs+='color : #000000;';
+		hs+='cursor : default;';
+		hs+='height : 20px;';
+		hs+='left : calc(50% - ((100px + 2px) / 2) + 8px);';
+		hs+='position : absolute;';
+		hs+='top : calc(50% - ((20px + 2px) / 2) + 8px);';
+		hs+='visibility : inherit;';
+		hs+='width : 100px;';
+		hs+='pointer-events:auto;';
+		el.setAttribute('style',hs);
+		el.style.transformOrigin='50% 50%';
+		hs='';
+		hs+='box-sizing: border-box;';
+		hs+='width: 100%;';
+		hs+='height: 100%;';
+		hs+='text-align: center;';
+		hs+='white-space: pre;';
+		hs+='padding: 0px;';
+		hs+='overflow: hidden;';
+		els.setAttribute('style',hs);
+		me._text_1.ggUpdateText=function() {
+			var params = [];
+			var hs = player._("text", params);
+			if (hs!=this.ggText) {
+				this.ggText=hs;
+				this.ggTextDiv.innerHTML=hs;
+				if (this.ggUpdatePosition) this.ggUpdatePosition();
+			}
+		}
+		me._text_1.ggUpdateText();
+		el.appendChild(els);
+		me._text_1.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			return player.getCurrentNode();
+		}
+		me._text_1.ggUpdatePosition=function (useTransition) {
+		}
+		me._rectangle_1.appendChild(me._text_1);
+		me._container_1.appendChild(me._rectangle_1);
+		me.divSkin.appendChild(me._container_1);
 		me._menu_left.logicBlock_visible();
 		me._menu_left_slider.logicBlock_position();
 		me._menu_left_slider.logicBlock_visible();
@@ -13057,6 +13201,7 @@ alert("The current view has been copied.");
 pano.on("modelloaded", () => { pano.setVariableValue("model_loading", false); });
 		me._model_load_spinner.logicBlock_size();
 		me._model_load_spinner.logicBlock_visible();
+		me._container_1.logicBlock_visible();
 		player.addListener('activehotspotchanged', function(event) {
 			if (hotspotTemplates.hasOwnProperty('SkinHotspotClass_ht_node')) {
 				for(var i = 0; i < hotspotTemplates['SkinHotspotClass_ht_node'].length; i++) {
@@ -13225,6 +13370,7 @@ pano.on("modelloaded", () => { pano.setVariableValue("model_loading", false); })
 			me._video_controller_seekbar_phone.ggConnectToMediaEl();
 			me._model_load_spinner.logicBlock_size();
 			me._model_load_spinner.logicBlock_visible();
+			me._container_1.logicBlock_visible();
 		});
 		player.addListener('changevisitednodes', function(event) {
 			for(var i = 0; i < me._node_cloner_phone.ggInstances.length; i++) {
@@ -13517,6 +13663,9 @@ pano.on("modelloaded", () => { pano.setVariableValue("model_loading", false); })
 					hotspotTemplates['SkinHotspotClass_ht_node'][i].ggEvent_hotspotsupdated();
 				}
 			}
+		});
+		player.addListener('imagesready', function(event) {
+			me._container_1.logicBlock_visible();
 		});
 		player.addListener('sizechanged', function(event) {
 			me._variable_resp_desktop.logicBlock();
