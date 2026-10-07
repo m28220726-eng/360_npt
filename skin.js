@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 8.0.2/22555
 // Filename: 
-// Generated 2026-10-07T08:06:14Z
+// Generated 2026-10-07T09:51:59Z
 
 function pano2vrSkin(player,base) {
 	player.addVariable('vis_sounds_splashscreen', 2, false, { ignoreInState: 1  });
@@ -14076,6 +14076,80 @@ pano.on("modelloaded", () => { pano.setVariableValue("model_loading", false); })
 		me._thumb_img_border_phone.ggUpdatePosition=function (useTransition) {
 		}
 		me._thumb_img_phone.appendChild(me._thumb_img_border_phone);
+		el=me._svg_1_1=document.createElement('div');
+		el.isDragging = function() {
+			let scrollerParent = me._svg_1_1;
+			while ((scrollerParent = scrollerParent.parentNode) != null) {
+				if (scrollerParent.hasOwnProperty('ggIsDragging') && scrollerParent.ggIsDragging == true) return true;
+			}
+			return false;
+		}
+		els=me._svg_1_1__img=document.createElement('img');
+		els.className='ggskin ggskin_svg';
+		hs='data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHdpZHRoPSI1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8cGF0aCBkPSJNMjU2IDEwMy40QzE1OC4xNzcgMTAzLjQgNjkuNDY1OSAxNTYuOTIgNC4wMDYxNCAyNDMuODUxQy0xLjMzNTM4IDI1MC45NzMgLTEuMzM1MzggMjYwLjkyMyA0LjAwNjE0IDI2OC4wNDVDNjkuNDY1OSAzNTUuMDggMTU4LjE3NyA0MDguNiAyNTYgNDA4LjZDMzUzLjgyMyA0MDguNiA0NDIuNTM0IDM1NS4wOCA1MDcuOTk0IDI2OC4xNDlDNTEzLjMzNSAyNjEuMDI3IDUxMy4zMzUgMjUxLjA3NyA1MDcuOT'+
+			'k0IDI0My45NTVDNDQyLjUzNCAxNTYuOTIgMzUzLjgyMyAxMDMuNCAyNTYgMTAzLjRaTTI2My4wMTcgMzYzLjQ1OUMxOTguMDgxIDM2Ny41NDMgMTQ0LjQ1NyAzMTQuMDIzIDE0OC41NDEgMjQ4Ljk4M0MxNTEuODkzIDE5NS4zNTggMTk1LjM1OCAxNTEuODkzIDI0OC45ODMgMTQ4LjU0MUMzMTMuOTE5IDE0NC40NTcgMzY3LjU0MyAxOTcuOTc2IDM2My40NTkgMjYzLjAxN0MzNjAuMDAyIDMxNi41MzcgMzE2LjUzNyAzNjAuMDAyIDI2My4wMTcgMzYzLjQ1OVpNMjU5Ljc3IDMxMy44MTRDMjI0Ljc4OSAzMTYuMDEzIDE5NS44ODIgMjg3LjIxMSAxOTguMTg2IDI1Mi4yM0MxOTkuOTY2IDIyMy4zMjIg'+
+			'MjIzLjQyNyAxOTkuOTY2IDI1Mi4zMzQgMTk4LjA4MUMyODcuMzE2IDE5NS44ODIgMzE2LjIyMyAyMjQuNjg0IDMxMy45MTkgMjU5LjY2NkMzMTIuMDM0IDI4OC42NzcgMjg4LjU3MyAzMTIuMDM0IDI1OS43NyAzMTMuODE0WiIgZmlsbD0iI0Y3QTYwMCIvPgo8L3N2Zz4K';
+		me._svg_1_1__img.setAttribute('src',hs);
+		hs ='';
+		hs += 'position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;;';
+		els.setAttribute('style', hs);
+		els['ondragstart']=function() { return false; };
+		el.appendChild(els);
+		el.ggSubElement = els;
+		el.ggId="Svg 1_1";
+		el.ggDx=0;
+		el.ggDy=2;
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
+		el.ggVisible=false;
+		el.className="ggskin ggskin_svg ";
+		el.ggType='svg';
+		el.userData=el;
+		hs ='';
+		hs+='height : 42px;';
+		hs+='left : calc(50% - ((48px + 0px) / 2) + 0px);';
+		hs+='position : absolute;';
+		hs+='top : calc(50% - ((42px + 0px) / 2) + 2px);';
+		hs+='visibility : hidden;';
+		hs+='width : 48px;';
+		hs+='pointer-events:auto;';
+		el.setAttribute('style',hs);
+		el.style.transformOrigin='50% 50%';
+		me._svg_1_1.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			return me._thumb_img_phone.ggNodeId;
+		}
+		me._svg_1_1.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.nodeVisited(me._svg_1_1.ggElementNodeId()) == true))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._svg_1_1.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._svg_1_1.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._svg_1_1.style.transition='';
+				if (me._svg_1_1.ggCurrentLogicStateVisible == 0) {
+					me._svg_1_1.style.visibility=(Number(me._svg_1_1.style.opacity)>0||!me._svg_1_1.style.opacity)?'inherit':'hidden';
+					me._svg_1_1.ggVisible=true;
+				}
+				else {
+					me._svg_1_1.style.visibility="hidden";
+					me._svg_1_1.ggVisible=false;
+				}
+			}
+		}
+		me._svg_1_1.ggUpdatePosition=function (useTransition) {
+		}
+		me._thumb_img_phone.appendChild(me._svg_1_1);
 		me._node_thumb_phone.appendChild(me._thumb_img_phone);
 		el=me._thumb_title_phone=document.createElement('div');
 		el.isDragging = function() {
@@ -14168,12 +14242,15 @@ pano.on("modelloaded", () => { pano.setVariableValue("model_loading", false); })
 		me.__div.appendChild(me._node_thumb_phone);
 		me.elementMouseOver['thumb_img_phone']=false;
 		me._thumb_img_border_phone.logicBlock_alpha();
+		me._svg_1_1.logicBlock_visible();
 		me._thumb_title_phone.logicBlock_textcolor();
 			me.ggEvent_changenode=function(event) {
+				me._svg_1_1.logicBlock_visible();
 				me._thumb_title_phone.logicBlock_textcolor();
 				me._thumb_title_phone.logicBlock_textcolor();
 			};
 			me.ggEvent_changevisitednodes=function(event) {
+				me._svg_1_1.logicBlock_visible();
 				me._thumb_title_phone.logicBlock_textcolor();
 			};
 	};
