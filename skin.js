@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 8.0.2/22555
 // Filename: NPT.ggsk
-// Generated 2026-10-08T09:27:50Z
+// Generated 2026-10-08T14:05:15Z
 
 function pano2vrSkin(player,base) {
 	player.addVariable('vis_sounds_splashscreen', 2, false, { ignoreInState: 1  });
@@ -12849,6 +12849,32 @@ alert("The current view has been copied.");
 		me._local_fonts.ggUpdatePosition=function (useTransition) {
 		}
 		me.divSkin.appendChild(me._local_fonts);
+		el=me._intro_overlay=document.createElement('div');
+		el.ggId="intro_overlay";
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_code ";
+		el.ggType='code';
+		el.userData=el;
+		hs ='';
+		hs+='height : 100%;';
+		hs+='left : 0px;';
+		hs+='position : absolute;';
+		hs+='top : 0px;';
+		hs+='visibility : inherit;';
+		hs+='width : 100%;';
+		hs+='pointer-events:none;';
+		el.setAttribute('style',hs);
+		el.style.transformOrigin='50% 50%';
+		me._intro_overlay.ggIsActive=function() {
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			return player.getCurrentNode();
+		}
+		me._intro_overlay.ggUpdatePosition=function (useTransition) {
+		}
+		me.divSkin.appendChild(me._intro_overlay);
 		me._menu_left.logicBlock_visible();
 		me._menu_left_slider.logicBlock_position();
 		me._menu_left_slider.logicBlock_visible();
@@ -13057,6 +13083,313 @@ alert("The current view has been copied.");
 pano.on("modelloaded", () => { pano.setVariableValue("model_loading", false); });
 		me._model_load_spinner.logicBlock_size();
 		me._model_load_spinner.logicBlock_visible();
+		el = me._intro_overlay;
+		(function () {
+  var overlayId = "p2vr-intro-overlay";
+  var styleId = "p2vr-intro-style";
+
+  // Не создавать заставку повторно
+  if (document.getElementById(overlayId)) return;
+
+  function createIntro() {
+    if (!document.body || document.getElementById(overlayId)) return;
+
+    var style = document.createElement("style");
+    style.id = styleId;
+    style.textContent = `
+      #p2vr-intro-overlay,
+      #p2vr-intro-overlay * {
+        box-sizing: border-box;
+      }
+
+      #p2vr-intro-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 2147483000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding:
+          max(16px, env(safe-area-inset-top))
+          max(16px, env(safe-area-inset-right))
+          max(16px, env(safe-area-inset-bottom))
+          max(16px, env(safe-area-inset-left));
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        background: rgba(12, 18, 27, 0.48);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        color: #fff;
+        font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      #p2vr-intro-overlay .intro-card {
+        position: relative;
+        width: min(540px, 100%);
+        max-height: calc(100vh - 32px);
+        max-height: calc(100dvh - 32px);
+        overflow: auto;
+        padding: clamp(28px, 5vw, 42px);
+        border: 1px solid rgba(255, 255, 255, 0.34);
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.16);
+        -webkit-backdrop-filter: blur(24px) saturate(145%);
+        backdrop-filter: blur(24px) saturate(145%);
+        box-shadow:
+          0 24px 70px rgba(0, 0, 0, 0.28),
+          inset 0 1px 0 rgba(255, 255, 255, 0.24);
+      }
+
+      #p2vr-intro-overlay .intro-kicker {
+        margin: 0 0 10px;
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        line-height: 1.4;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      #p2vr-intro-overlay h1 {
+        max-width: 14em;
+        margin: 0 auto 22px;
+        color: #fff;
+        font-size: clamp(26px, 5vw, 34px);
+        font-weight: 700;
+        letter-spacing: -0.035em;
+        line-height: 1.14;
+        text-align: center;
+        text-wrap: balance;
+        text-shadow: 0 2px 14px rgba(0, 0, 0, 0.2);
+      }
+
+      #p2vr-intro-overlay .intro-list {
+        display: grid;
+        gap: 14px;
+        max-width: 430px;
+        margin: 0 auto;
+      }
+
+      #p2vr-intro-overlay .intro-item {
+        display: grid;
+        grid-template-columns: 30px 1fr;
+        gap: 12px;
+        align-items: start;
+      }
+
+      #p2vr-intro-overlay .intro-icon {
+        display: flex;
+        width: 30px;
+        height: 30px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.14);
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      #p2vr-intro-overlay .intro-item p {
+        margin: 2px 0 0;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 16px;
+        line-height: 1.55;
+        text-shadow: 0 1px 8px rgba(0, 0, 0, 0.18);
+      }
+
+      #p2vr-intro-overlay .intro-item strong {
+        color: #fff;
+        font-weight: 700;
+      }
+
+      #p2vr-intro-overlay .intro-start {
+        display: flex;
+        min-width: 190px;
+        min-height: 50px;
+        align-items: center;
+        justify-content: center;
+        margin: 28px auto 0;
+        padding: 13px 26px;
+        border: 1px solid rgba(255, 255, 255, 0.42);
+        border-radius: 999px;
+        background: #F7A600;
+        color: #202124;
+        font: inherit;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        touch-action: manipulation;
+        box-shadow: 0 8px 24px rgba(247, 166, 0, 0.24);
+        transition: background-color 150ms ease, transform 150ms ease;
+      }
+
+      #p2vr-intro-overlay .intro-start:hover {
+        background: #e99b00;
+        transform: translateY(-1px);
+      }
+
+      #p2vr-intro-overlay .intro-start:active {
+        transform: translateY(0);
+      }
+
+      /* Кнопка закрытия */
+      #p2vr-intro-overlay .intro-close {
+        position: absolute;
+        top: 12px;
+        right: 14px;
+        display: flex;
+        width: 38px;
+        height: 38px;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        border: 1px solid rgba(255, 255, 255, 0.24);
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.12);
+        color: transparent;
+        font-size: 0;
+        line-height: 0;
+        cursor: pointer;
+        touch-action: manipulation;
+      }
+
+      /* Рисуем крестик CSS-линиями, чтобы он был по центру */
+      #p2vr-intro-overlay .intro-close::before,
+      #p2vr-intro-overlay .intro-close::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 14px;
+        height: 2px;
+        border-radius: 2px;
+        background: #fff;
+        content: "";
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      #p2vr-intro-overlay .intro-close::after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+
+      #p2vr-intro-overlay .intro-close:hover {
+        background: rgba(255, 255, 255, 0.22);
+      }
+
+      #p2vr-intro-overlay .intro-start:focus-visible,
+      #p2vr-intro-overlay .intro-close:focus-visible {
+        outline: 3px solid #fff;
+        outline-offset: 3px;
+      }
+
+      @supports not ((backdrop-filter: blur(1px)) or
+                     (-webkit-backdrop-filter: blur(1px))) {
+        #p2vr-intro-overlay .intro-card {
+          background: rgba(31, 39, 49, 0.94);
+        }
+      }
+
+      @media (max-width: 480px) {
+        #p2vr-intro-overlay .intro-card {
+          padding: 30px 22px 24px;
+          border-radius: 18px;
+        }
+
+        #p2vr-intro-overlay h1 {
+          padding: 0 10px;
+          font-size: clamp(25px, 7vw, 30px);
+        }
+
+        #p2vr-intro-overlay .intro-item p {
+          font-size: 15px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        #p2vr-intro-overlay .intro-start {
+          transition: none;
+        }
+      }
+    `;
+
+    document.head.appendChild(style);
+
+    var overlay = document.createElement("div");
+    overlay.id = overlayId;
+    overlay.setAttribute("role", "dialog");
+    overlay.setAttribute("aria-modal", "true");
+    overlay.setAttribute("aria-labelledby", "p2vr-intro-title");
+
+    overlay.innerHTML = `
+      <section class="intro-card">
+        <button
+          class="intro-close"
+          type="button"
+          aria-label="Закрыть инструкцию"
+        >×</button>
+
+        <p class="intro-kicker">Виртуальный тур</p>
+        <h1 id="p2vr-intro-title">Добро пожаловать!</h1>
+
+        <div class="intro-list">
+          <div class="intro-item">
+            <span class="intro-icon" aria-hidden="true">↔</span>
+            <p><strong>Осматривайтесь:</strong> перемещайте панораму пальцем или мышью.</p>
+          </div>
+
+          <div class="intro-item">
+            <span class="intro-icon" aria-hidden="true">●</span>
+            <p><strong>Переходите дальше:</strong> нажимайте на метки, чтобы открыть другие помещения и узнать больше.</p>
+          </div>
+
+          <div class="intro-item">
+            <span class="intro-icon" aria-hidden="true">◎</span>
+            <p><strong>На телефоне:</strong> поверните устройство, чтобы осмотреться.</p>
+          </div>
+        </div>
+
+        <button class="intro-start" type="button">
+          Начать просмотр
+        </button>
+      </section>
+    `;
+
+    document.body.appendChild(overlay);
+
+    function closeIntro() {
+      overlay.remove();
+      style.remove();
+      document.removeEventListener("keydown", onKeyDown);
+    }
+
+    function onKeyDown(event) {
+      if (event.key === "Escape") {
+        closeIntro();
+      }
+    }
+
+    overlay
+      .querySelector(".intro-start")
+      .addEventListener("click", closeIntro);
+
+    overlay
+      .querySelector(".intro-close")
+      .addEventListener("click", closeIntro);
+
+    document.addEventListener("keydown", onKeyDown);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", createIntro, { once: true });
+  } else {
+    createIntro();
+  }
+})();
 		player.addListener('activehotspotchanged', function(event) {
 			if (hotspotTemplates.hasOwnProperty('SkinHotspotClass_ht_node')) {
 				for(var i = 0; i < hotspotTemplates['SkinHotspotClass_ht_node'].length; i++) {
