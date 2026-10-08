@@ -9,7 +9,7 @@
     </input>
     <userdata altitude="0.00" author="" capturedatetime="2026-09-08T15:02:46" comment="" copyright="" customnodeid="" datetime="" description="" heading="0" hideinlist="0" info="" latitude="-1000.00000000" longitude="0.00000000" nodeid="node3" source="" tags="" title=""/>
     <view fovmode="1" pannorth="0">
-      <start fov="120" pan="-4.63" projection="4" tilt="-0.51"/>
+      <start fov="120" pan="-4.63" projection="4" tilt="0"/>
       <flyin fov="170" pan="0" projection="9" tilt="-90"/>
       <min fov="0" pan="0" tilt="-90"/>
       <max fov="120" fovfisheye="360" fovstereographic="270" pan="360" scaletofit="0" tilt="90"/>
@@ -51,9 +51,9 @@
     </input>
     <userdata altitude="0.00" author="" capturedatetime="2026-09-08T15:02:48" comment="" copyright="" customnodeid="" datetime="" description="" heading="0" hideinlist="0" info="" latitude="-1000.00000000" longitude="0.00000000" nodeid="node5" source="" tags="" title=""/>
     <view fovmode="1" pannorth="0">
-      <start fov="140" pan="-5.03" projection="4" tilt="0.68"/>
+      <start fov="120" pan="-5.03" projection="4" tilt="0"/>
       <flyin fov="170" pan="0" projection="9" tilt="-90"/>
-      <min fov="0" pan="0" tilt="-90"/>
+      <min fov="0.01" pan="0" tilt="-90"/>
       <max fov="120" fovfisheye="360" fovstereographic="270" pan="360" scaletofit="0" tilt="90"/>
     </view>
     <hotspots>
@@ -75,9 +75,9 @@
     </input>
     <userdata altitude="0.00" author="" capturedatetime="2026-09-08T15:02:46" comment="" copyright="" customnodeid="" datetime="" description="" heading="0" hideinlist="0" info="" latitude="-1000.00000000" longitude="0.00000000" nodeid="node6" source="" tags="" title=""/>
     <view fovmode="1" pannorth="0">
-      <start fov="130" pan="-19.24" projection="4" tilt="-2.78"/>
+      <start fov="120" pan="-19.24" projection="4" tilt="0"/>
       <flyin fov="170" pan="0" projection="9" tilt="-90"/>
-      <min fov="0" pan="0" tilt="-90"/>
+      <min fov="0.01" pan="0" tilt="-90"/>
       <max fov="120" fovfisheye="360" fovstereographic="270" pan="360" scaletofit="0" tilt="90"/>
     </view>
     <hotspots>
@@ -96,9 +96,9 @@
     </input>
     <userdata altitude="0.00" author="" capturedatetime="2026-09-08T15:02:46" comment="" copyright="" customnodeid="" datetime="" description="" heading="0" hideinlist="0" info="" latitude="-1000.00000000" longitude="0.00000000" nodeid="node7" source="" tags="" title=""/>
     <view fovmode="1" pannorth="0">
-      <start fov="140" pan="4.99" projection="4" tilt="1.08"/>
+      <start fov="120" pan="4.99" projection="4" tilt="0"/>
       <flyin fov="170" pan="0" projection="9" tilt="-90"/>
-      <min fov="0" pan="0" tilt="-90"/>
+      <min fov="0.01" pan="0" tilt="-90"/>
       <max fov="120" fovfisheye="360" fovstereographic="270" pan="360" scaletofit="0" tilt="90"/>
     </view>
     <hotspots>
@@ -117,9 +117,9 @@
     </input>
     <userdata altitude="0.00" author="" capturedatetime="2026-09-08T15:02:46" comment="" copyright="" customnodeid="" datetime="" description="" heading="0" hideinlist="0" info="" latitude="-1000.00000000" longitude="0.00000000" nodeid="node8" source="" tags="" title=""/>
     <view fovmode="1" pannorth="0">
-      <start fov="140" pan="-145.97" projection="4" tilt="-0.35"/>
+      <start fov="120" pan="-145.97" projection="4" tilt="0"/>
       <flyin fov="170" pan="0" projection="9" tilt="-90"/>
-      <min fov="0" pan="0" tilt="-90"/>
+      <min fov="0.01" pan="0" tilt="-90"/>
       <max fov="120" fovfisheye="360" fovstereographic="270" pan="360" scaletofit="0" tilt="90"/>
     </view>
     <hotspots>
@@ -140,9 +140,9 @@
     </input>
     <userdata altitude="0.00" author="" capturedatetime="2026-09-08T15:02:46" comment="" copyright="" customnodeid="" datetime="" description="" heading="0" hideinlist="0" info="" latitude="-1000.00000000" longitude="0.00000000" nodeid="node9" source="" tags="" title=""/>
     <view fovmode="1" pannorth="0">
-      <start fov="140" pan="-3.08" projection="4" tilt="-1.85"/>
+      <start fov="120" pan="-3.08" projection="4" tilt="0"/>
       <flyin fov="170" pan="0" projection="9" tilt="-90"/>
-      <min fov="0" pan="0" tilt="-90"/>
+      <min fov="0.01" pan="0" tilt="-90"/>
       <max fov="120" fovfisheye="360" fovstereographic="270" pan="360" scaletofit="0" tilt="90"/>
     </view>
     <hotspots>
@@ -160,9 +160,9 @@
     </input>
     <userdata altitude="0.00" author="" capturedatetime="2026-09-08T15:02:48" comment="" copyright="" customnodeid="" datetime="" description="" heading="0" hideinlist="0" info="" latitude="-1000.00000000" longitude="0.00000000" nodeid="node10" source="" tags="" title=""/>
     <view fovmode="1" pannorth="0">
-      <start fov="130" pan="15.52" projection="4" tilt="-0.63"/>
+      <start fov="120" pan="15.52" projection="4" tilt="0"/>
       <flyin fov="170" pan="0" projection="9" tilt="-90"/>
-      <min fov="0" pan="0" tilt="-90"/>
+      <min fov="0.01" pan="0" tilt="-90"/>
       <max fov="120" fovfisheye="360" fovstereographic="270" pan="360" scaletofit="0" tilt="90"/>
     </view>
     <hotspots>
@@ -180,9 +180,9 @@
     </input>
     <userdata altitude="0.00" author="" capturedatetime="2026-09-08T15:02:44" comment="" copyright="" customnodeid="" datetime="" description="" heading="0" hideinlist="0" info="" latitude="-1000.00000000" longitude="0.00000000" nodeid="node11" source="" tags="" title=""/>
     <view fovmode="1" pannorth="0">
-      <start fov="130" pan="94.05" projection="4" tilt="-1.31"/>
+      <start fov="120" pan="94.05" projection="4" tilt="0"/>
       <flyin fov="170" pan="0" projection="9" tilt="-90"/>
-      <min fov="0" pan="0" tilt="-90"/>
+      <min fov="0.01" pan="0" tilt="-90"/>
       <max fov="120" fovfisheye="360" fovstereographic="270" pan="360" scaletofit="0" tilt="90"/>
     </view>
     <hotspots>
@@ -202,9 +202,9 @@
     </input>
     <userdata altitude="0.00" author="" capturedatetime="2026-09-08T15:02:44" comment="" copyright="" customnodeid="" datetime="" description="" heading="0" hideinlist="0" info="" latitude="-1000.00000000" longitude="0.00000000" nodeid="node12" source="" tags="" title=""/>
     <view fovmode="1" pannorth="0">
-      <start fov="130" pan="69.34" projection="4" tilt="1.07"/>
+      <start fov="120" pan="65.2101" projection="4" tilt="0"/>
       <flyin fov="170" pan="0" projection="9" tilt="-90"/>
-      <min fov="0" pan="0" tilt="-90"/>
+      <min fov="0.01" pan="0" tilt="-90"/>
       <max fov="120" fovfisheye="360" fovstereographic="270" pan="360" scaletofit="0" tilt="90"/>
     </view>
     <hotspots>
@@ -224,7 +224,7 @@
     </input>
     <userdata altitude="0.00" author="" capturedatetime="2026-09-08T15:02:44" comment="" copyright="" customnodeid="" datetime="" description="" heading="0" hideinlist="0" info="" latitude="-1000.00000000" longitude="0.00000000" nodeid="node13" source="" tags="" title=""/>
     <view fovmode="1" pannorth="0">
-      <start fov="130" pan="1.64" projection="4" tilt="-5.83"/>
+      <start fov="120" pan="1.64" projection="4" tilt="0"/>
       <flyin fov="170" pan="0" projection="9" tilt="-90"/>
       <min fov="0.01" pan="0" tilt="-90"/>
       <max fov="120" fovfisheye="360" fovstereographic="270" pan="360" scaletofit="0" tilt="90"/>
@@ -246,9 +246,9 @@
     </input>
     <userdata altitude="0.00" author="" capturedatetime="2026-09-08T15:02:44" comment="" copyright="" customnodeid="" datetime="" description="" heading="0" hideinlist="0" info="" latitude="-1000.00000000" longitude="0.00000000" nodeid="node14" source="" tags="" title=""/>
     <view fovmode="1" pannorth="0">
-      <start fov="140" pan="41.3" projection="4" tilt="-2.68"/>
+      <start fov="120" pan="37.0671" projection="4" tilt="0"/>
       <flyin fov="170" pan="0" projection="9" tilt="-90"/>
-      <min fov="0" pan="0" tilt="-90"/>
+      <min fov="0.01" pan="0" tilt="-90"/>
       <max fov="120" fovfisheye="360" fovstereographic="270" pan="360" scaletofit="0" tilt="90"/>
     </view>
     <hotspots>
@@ -266,13 +266,14 @@
     </input>
     <userdata altitude="0.00" author="" capturedatetime="2026-09-08T15:02:44" comment="" copyright="" customnodeid="" datetime="" description="" heading="0" hideinlist="0" info="" latitude="-1000.00000000" longitude="0.00000000" nodeid="node15" source="" tags="" title=""/>
     <view fovmode="1" pannorth="0">
-      <start fov="130" pan="26.4" projection="4" tilt="-2.11"/>
+      <start fov="120" pan="26.8575" projection="4" tilt="0"/>
       <flyin fov="130" pan="35.76" projection="4" tilt="-0.14"/>
-      <min fov="0" pan="0" tilt="-90"/>
+      <min fov="0.01" pan="0" tilt="-90"/>
       <max fov="120" fovfisheye="360" fovstereographic="270" pan="360" scaletofit="0" tilt="90"/>
     </view>
     <hotspots>
       <hotspot description="" id="Point01" pan="-158.98" skinid="ht_node" target="-179.5/6.5/133.6" tilt="-13.1237" title="" url="{node13}"/>
+      <hotspot description="" id="Point02" pan="-158.83" skinid="ht_node" target="" tilt="-0.462516" title="" url="{node16}"/>
     </hotspots>
     <media/>
     <animation animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0" useinautorotation="0"/>
@@ -286,13 +287,14 @@
     </input>
     <userdata altitude="0.00" author="" capturedatetime="2026-09-08T15:02:44" comment="" copyright="" customnodeid="" datetime="" description="" heading="0" hideinlist="0" info="" latitude="-1000.00000000" longitude="0.00000000" nodeid="node16" source="" tags="" title=""/>
     <view fovmode="1" pannorth="0">
-      <start fov="130" pan="-39.02" projection="4" tilt="1.72"/>
+      <start fov="120" pan="-39.02" projection="4" tilt="0"/>
       <flyin fov="100" pan="0" projection="4" tilt="0"/>
-      <min fov="0" pan="0" tilt="-90"/>
+      <min fov="0.01" pan="0" tilt="-90"/>
       <max fov="120" fovfisheye="360" fovstereographic="270" pan="360" scaletofit="0" tilt="90"/>
     </view>
     <hotspots>
       <hotspot description="" id="Point01" pan="1.23704" skinid="ht_node" target="97.9/-0.9/130.0" tilt="-8.76249" title="" url="{node11}"/>
+      <hotspot description="" id="Point02" pan="1.8666" skinid="ht_node" target="" tilt="-0.641985" title="" url="{node15}"/>
     </hotspots>
     <media/>
     <animation animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0" useinautorotation="0"/>
@@ -306,9 +308,9 @@
     </input>
     <userdata altitude="0.00" author="" capturedatetime="2026-09-08T15:02:48" comment="" copyright="" customnodeid="" datetime="" description="" heading="0" hideinlist="0" info="" latitude="-1000.00000000" longitude="0.00000000" nodeid="node1" source="" tags="" title=""/>
     <view fovmode="1" pannorth="0">
-      <start fov="130" pan="130.34" projection="4" tilt="-1.67"/>
+      <start fov="120" pan="130.34" projection="4" tilt="0"/>
       <flyin fov="170" pan="0" projection="9" tilt="-90"/>
-      <min fov="0" pan="0" tilt="-90"/>
+      <min fov="0.01" pan="0" tilt="-90"/>
       <max fov="120" fovfisheye="360" fovstereographic="270" pan="360" scaletofit="0" tilt="90"/>
     </view>
     <hotspots>
@@ -318,7 +320,7 @@
     <animation animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0" useinautorotation="0"/>
   </panorama>
   <masternode>
-    <userdata author="" comment="" copyright="" description="" tags="" title="" uuid="{3a8bea55-1c49-4496-bf90-e0fb835dbad5}"/>
+    <userdata author="" comment="" copyright="" description="" tags="" title="" uuid="{198564f3-b6b2-4bdd-aa1f-c6bf07448235}"/>
     <transition blendcolor="0x000000" blendtime="1" delay="none" enabled="1" softedge="0" type="mesh" zoomafterinfov="140" zoomafteroutfov="40" zoomfov="40" zoomin="7" zoomout="0" zoomoutpause="1" zoomspeed="2"/>
     <control contextfullscreen="0" contextprojections="0" contextvr="1" dblclickfullscreen="0" hideabout="1" invertcontrol="1" invertwheel="0" lockedkeyboard="0" lockedkeyboardzoom="0" lockedmouse="0" lockedwheel="0" rubberband="0" sensitivity="3" simulatemass="1" speedwheel="1" zoomcentercursor="1"/>
     <animationsequences>
