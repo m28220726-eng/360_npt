@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 8.0.2/22555
 // Filename: NPT.ggsk
-// Generated 2026-10-08T14:05:15Z
+// Generated 2026-10-08T14:18:53Z
 
 function pano2vrSkin(player,base) {
 	player.addVariable('vis_sounds_splashscreen', 2, false, { ignoreInState: 1  });
@@ -13086,7 +13086,6 @@ pano.on("modelloaded", () => { pano.setVariableValue("model_loading", false); })
 		el = me._intro_overlay;
 		(function () {
   var overlayId = "p2vr-intro-overlay";
-  var styleId = "p2vr-intro-style";
 
   // Не создавать заставку повторно
   if (document.getElementById(overlayId)) return;
@@ -13095,7 +13094,7 @@ pano.on("modelloaded", () => { pano.setVariableValue("model_loading", false); })
     if (!document.body || document.getElementById(overlayId)) return;
 
     var style = document.createElement("style");
-    style.id = styleId;
+    style.id = "p2vr-intro-style";
     style.textContent = `
       #p2vr-intro-overlay,
       #p2vr-intro-overlay * {
@@ -13126,9 +13125,15 @@ pano.on("modelloaded", () => { pano.setVariableValue("model_loading", false); })
         text-rendering: optimizeLegibility;
       }
 
+      @supports (align-items: safe center) {
+        #p2vr-intro-overlay {
+          align-items: safe center;
+        }
+      }
+
       #p2vr-intro-overlay .intro-card {
         position: relative;
-        width: min(540px, 100%);
+        width: min(560px, 100%);
         max-height: calc(100vh - 32px);
         max-height: calc(100dvh - 32px);
         overflow: auto;
@@ -13141,6 +13146,14 @@ pano.on("modelloaded", () => { pano.setVariableValue("model_loading", false); })
         box-shadow:
           0 24px 70px rgba(0, 0, 0, 0.28),
           inset 0 1px 0 rgba(255, 255, 255, 0.24);
+      }
+
+      #p2vr-intro-overlay .intro-mobile {
+        display: none;
+      }
+
+      #p2vr-intro-overlay .intro-desktop {
+        display: block;
       }
 
       #p2vr-intro-overlay .intro-kicker {
@@ -13170,36 +13183,44 @@ pano.on("modelloaded", () => { pano.setVariableValue("model_loading", false); })
       #p2vr-intro-overlay .intro-list {
         display: grid;
         gap: 14px;
-        max-width: 430px;
+        width: 100%;
+        max-width: 450px;
         margin: 0 auto;
       }
 
       #p2vr-intro-overlay .intro-item {
         display: grid;
-        grid-template-columns: 30px 1fr;
+        grid-template-columns: 32px minmax(0, 1fr);
         gap: 12px;
         align-items: start;
       }
 
       #p2vr-intro-overlay .intro-icon {
         display: flex;
-        width: 30px;
-        height: 30px;
+        width: 32px;
+        height: 32px;
         align-items: center;
         justify-content: center;
         border: 1px solid rgba(255, 255, 255, 0.28);
         border-radius: 50%;
         background: rgba(255, 255, 255, 0.14);
         color: #fff;
-        font-size: 14px;
-        font-weight: 700;
+      }
+
+      #p2vr-intro-overlay .intro-icon svg {
+        display: block;
+        width: 19px;
+        height: 19px;
+        overflow: visible;
       }
 
       #p2vr-intro-overlay .intro-item p {
+        min-width: 0;
         margin: 2px 0 0;
-        color: rgba(255, 255, 255, 0.9);
+        color: rgba(255, 255, 255, 0.92);
         font-size: 16px;
         line-height: 1.55;
+        overflow-wrap: anywhere;
         text-shadow: 0 1px 8px rgba(0, 0, 0, 0.18);
       }
 
@@ -13238,7 +13259,6 @@ pano.on("modelloaded", () => { pano.setVariableValue("model_loading", false); })
         transform: translateY(0);
       }
 
-      /* Кнопка закрытия */
       #p2vr-intro-overlay .intro-close {
         position: absolute;
         top: 12px;
@@ -13259,7 +13279,6 @@ pano.on("modelloaded", () => { pano.setVariableValue("model_loading", false); })
         touch-action: manipulation;
       }
 
-      /* Рисуем крестик CSS-линиями, чтобы он был по центру */
       #p2vr-intro-overlay .intro-close::before,
       #p2vr-intro-overlay .intro-close::after {
         position: absolute;
@@ -13294,19 +13313,70 @@ pano.on("modelloaded", () => { pano.setVariableValue("model_loading", false); })
         }
       }
 
-      @media (max-width: 480px) {
+      /* Телефоны и сенсорные устройства */
+      @media (max-width: 700px), (hover: none) and (pointer: coarse) {
+        #p2vr-intro-overlay .intro-mobile {
+          display: block;
+        }
+
+        #p2vr-intro-overlay .intro-desktop {
+          display: none;
+        }
+
         #p2vr-intro-overlay .intro-card {
+          width: min(500px, 100%);
           padding: 30px 22px 24px;
           border-radius: 18px;
         }
 
         #p2vr-intro-overlay h1 {
           padding: 0 10px;
+          margin-bottom: 20px;
           font-size: clamp(25px, 7vw, 30px);
+        }
+
+        #p2vr-intro-overlay .intro-list {
+          gap: 13px;
+        }
+
+        #p2vr-intro-overlay .intro-item {
+          grid-template-columns: 32px minmax(0, 1fr);
+          gap: 11px;
         }
 
         #p2vr-intro-overlay .intro-item p {
           font-size: 15px;
+          line-height: 1.5;
+        }
+
+        #p2vr-intro-overlay .intro-start {
+          width: 100%;
+          max-width: 260px;
+          margin-top: 24px;
+        }
+      }
+
+      @media (max-width: 360px) {
+        #p2vr-intro-overlay {
+          padding: 12px;
+        }
+
+        #p2vr-intro-overlay .intro-card {
+          padding: 28px 17px 20px;
+        }
+
+        #p2vr-intro-overlay .intro-item {
+          grid-template-columns: 29px minmax(0, 1fr);
+          gap: 9px;
+        }
+
+        #p2vr-intro-overlay .intro-icon {
+          width: 29px;
+          height: 29px;
+        }
+
+        #p2vr-intro-overlay .intro-item p {
+          font-size: 14px;
         }
       }
 
@@ -13323,39 +13393,108 @@ pano.on("modelloaded", () => { pano.setVariableValue("model_loading", false); })
     overlay.id = overlayId;
     overlay.setAttribute("role", "dialog");
     overlay.setAttribute("aria-modal", "true");
-    overlay.setAttribute("aria-labelledby", "p2vr-intro-title");
+    overlay.setAttribute("aria-label", "Инструкция к виртуальному туру");
 
     overlay.innerHTML = `
       <section class="intro-card">
+
         <button
           class="intro-close"
           type="button"
           aria-label="Закрыть инструкцию"
         >×</button>
 
-        <p class="intro-kicker">Виртуальный тур</p>
-        <h1 id="p2vr-intro-title">Добро пожаловать!</h1>
+        <!-- Мобильная версия -->
+        <div class="intro-view intro-mobile">
+          <p class="intro-kicker">Виртуальный тур</p>
+          <h1>Добро пожаловать!</h1>
 
-        <div class="intro-list">
-          <div class="intro-item">
-            <span class="intro-icon" aria-hidden="true">↔</span>
-            <p><strong>Осматривайтесь:</strong> перемещайте панораму пальцем или мышью.</p>
+          <div class="intro-list">
+            <div class="intro-item">
+              <span class="intro-icon" aria-hidden="true">
+                <!-- Иконка пальца -->
+                <svg viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="1.8"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M8.2 11V5.8a1.6 1.6 0 0 1 3.2 0v4.1"/>
+                  <path d="M11.4 9.8a1.55 1.55 0 0 1 3.1 0v1.1"/>
+                  <path d="M14.5 10.4a1.5 1.5 0 0 1 3 0v2"/>
+                  <path d="M17.5 12a1.5 1.5 0 0 1 3 0v3.1c0 3.6-2.4 6-6 6h-1.1c-2.2 0-3.5-.8-4.7-2.3l-2.4-3a1.55 1.55 0 0 1 2.4-2l1.5 1.5V11"/>
+                </svg>
+              </span>
+              <p><strong>Осматривайтесь:</strong> перемещайте панораму пальцем.</p>
+            </div>
+
+            <div class="intro-item">
+              <span class="intro-icon" aria-hidden="true">
+                <!-- Кружок с точкой -->
+                <svg viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="1.8">
+                  <circle cx="12" cy="12" r="8.5"/>
+                  <circle cx="12" cy="12" r="2.2" fill="currentColor" stroke="none"/>
+                </svg>
+              </span>
+              <p><strong>Переходите дальше:</strong> нажимайте на метки, чтобы открыть другие помещения и узнать больше.</p>
+            </div>
+
+            <div class="intro-item">
+              <span class="intro-icon" aria-hidden="true">
+                <!-- Поворот телефона -->
+                <svg viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="1.8"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="8" y="6" width="8" height="13" rx="1.7"/>
+                  <path d="M11 8h2"/>
+                  <path d="M5.5 10.5A7.5 7.5 0 0 1 18 6.8"/>
+                  <path d="M17.7 4.7 18 7l-2.3.2"/>
+                  <path d="M18.5 14A7.5 7.5 0 0 1 6 17.7"/>
+                  <path d="M6.3 19.8 6 17.5l2.3-.2"/>
+                </svg>
+              </span>
+              <p><strong>На телефоне:</strong> поверните устройство для удобного просмотра.</p>
+            </div>
           </div>
 
-          <div class="intro-item">
-            <span class="intro-icon" aria-hidden="true">●</span>
-            <p><strong>Переходите дальше:</strong> нажимайте на метки, чтобы открыть другие помещения и узнать больше.</p>
-          </div>
-
-          <div class="intro-item">
-            <span class="intro-icon" aria-hidden="true">◎</span>
-            <p><strong>На телефоне:</strong> поверните устройство, чтобы осмотреться.</p>
-          </div>
+          <button class="intro-start" type="button">Начать просмотр</button>
         </div>
 
-        <button class="intro-start" type="button">
-          Начать просмотр
-        </button>
+        <!-- Версия для ПК -->
+        <div class="intro-view intro-desktop">
+          <p class="intro-kicker">Виртуальный тур</p>
+          <h1>Добро пожаловать!</h1>
+
+          <div class="intro-list">
+            <div class="intro-item">
+              <span class="intro-icon" aria-hidden="true">
+                <!-- Иконка мыши с выделенной левой кнопкой -->
+                <svg viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="1.7"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21a7 7 0 0 0 7-7V10a7 7 0 0 0-14 0v4a7 7 0 0 0 7 7Z"/>
+                  <path d="M12 3v7"/>
+                  <path d="M5.3 8.5A7 7 0 0 1 12 3v7H5.3Z"
+                        fill="rgba(247,166,0,0.85)" stroke="currentColor"/>
+                </svg>
+              </span>
+              <p><strong>Осматривайтесь:</strong> перемещайте панораму, зажав левую кнопку мыши.</p>
+            </div>
+
+            <div class="intro-item">
+              <span class="intro-icon" aria-hidden="true">
+                <!-- Кружок с точкой -->
+                <svg viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="1.8">
+                  <circle cx="12" cy="12" r="8.5"/>
+                  <circle cx="12" cy="12" r="2.2" fill="currentColor" stroke="none"/>
+                </svg>
+              </span>
+              <p><strong>Переходите дальше:</strong> нажимайте на метки, чтобы открыть другие помещения и узнать больше.</p>
+            </div>
+          </div>
+
+          <button class="intro-start" type="button">Начать просмотр</button>
+        </div>
+
       </section>
     `;
 
@@ -13373,13 +13512,9 @@ pano.on("modelloaded", () => { pano.setVariableValue("model_loading", false); })
       }
     }
 
-    overlay
-      .querySelector(".intro-start")
-      .addEventListener("click", closeIntro);
-
-    overlay
-      .querySelector(".intro-close")
-      .addEventListener("click", closeIntro);
+    overlay.querySelectorAll(".intro-start, .intro-close").forEach(function (button) {
+      button.addEventListener("click", closeIntro);
+    });
 
     document.addEventListener("keydown", onKeyDown);
   }
