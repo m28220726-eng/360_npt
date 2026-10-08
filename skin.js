@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 8.0.2/22555
-// Filename: NPT.ggsk
-// Generated 2026-10-08T14:43:36Z
+// Filename: 
+// Generated 2026-10-08T14:53:04Z
 
 function pano2vrSkin(player,base) {
 	player.addVariable('vis_sounds_splashscreen', 2, false, { ignoreInState: 1  });
@@ -2968,12 +2968,12 @@ navigator.share({ url: shareUrl });
 		el=me._menu_center_button_bg=document.createElement('div');
 		el.ggId="menu_center_button_bg";
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
-		el.ggVisible=true;
+		el.ggVisible=false;
 		el.className="ggskin ggskin_rectangle gradient";
 		el.ggType='rectangle';
 		el.userData=el;
 		hs ='';
-		hs+='background : #f7a600;';
+		hs+='background : #ffaa00;';
 		hs+='border : 0px solid #000000;';
 		hs+='border-radius : 25px;';
 		hs+='cursor : pointer;';
@@ -2981,7 +2981,7 @@ navigator.share({ url: shareUrl });
 		hs+='left : 0px;';
 		hs+='position : absolute;';
 		hs+='top : 0px;';
-		hs+='visibility : inherit;';
+		hs+='visibility : hidden;';
 		hs+='width : 52px;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
@@ -2996,6 +2996,30 @@ navigator.share({ url: shareUrl });
 		}
 		el.ggElementNodeId=function() {
 			return player.getCurrentNode();
+		}
+		me._menu_center_button_bg.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getIsMobile() == false))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._menu_center_button_bg.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._menu_center_button_bg.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._menu_center_button_bg.style.transition='';
+				if (me._menu_center_button_bg.ggCurrentLogicStateVisible == 0) {
+					me._menu_center_button_bg.style.visibility=(Number(me._menu_center_button_bg.style.opacity)>0||!me._menu_center_button_bg.style.opacity)?'inherit':'hidden';
+					me._menu_center_button_bg.ggVisible=true;
+				}
+				else {
+					me._menu_center_button_bg.style.visibility="hidden";
+					me._menu_center_button_bg.ggVisible=false;
+				}
+			}
 		}
 		me._menu_center_button_bg.logicBlock_tabindex = function() {
 			var newLogicStateTabIndex;
@@ -3057,6 +3081,7 @@ navigator.share({ url: shareUrl });
 			me._menu_center_icon.logicBlock_visible();
 			me._menu_center_icon_active.logicBlock_visible();
 		}
+		me._menu_center_button_bg.ggCurrentLogicStateVisible = -1;
 		me._menu_center_button_bg.ggCurrentLogicStateTabIndex = -1;
 		me._menu_center_button_bg.ggUpdateConditionTimer=function () {
 			if (me.elementMouseOver['menu_center_button_bg']) {
@@ -3261,30 +3286,6 @@ navigator.share({ url: shareUrl });
 		el.ggElementNodeId=function() {
 			return player.getCurrentNode();
 		}
-		me._tip_pano.logicBlock_visible = function() {
-			var newLogicStateVisible;
-			if (
-				((player.getIsMobile() == true))
-			)
-			{
-				newLogicStateVisible = 0;
-			}
-			else {
-				newLogicStateVisible = -1;
-			}
-			if (me._tip_pano.ggCurrentLogicStateVisible != newLogicStateVisible) {
-				me._tip_pano.ggCurrentLogicStateVisible = newLogicStateVisible;
-				me._tip_pano.style.transition='';
-				if (me._tip_pano.ggCurrentLogicStateVisible == 0) {
-					me._tip_pano.style.visibility="hidden";
-					me._tip_pano.ggVisible=false;
-				}
-				else {
-					me._tip_pano.style.visibility="hidden";
-					me._tip_pano.ggVisible=false;
-				}
-			}
-		}
 		me._tip_pano.ggUpdatePosition=function (useTransition) {
 		}
 		me._menu_center_button_bg.appendChild(me._tip_pano);
@@ -3297,7 +3298,7 @@ navigator.share({ url: shareUrl });
 		el.ggType='rectangle';
 		el.userData=el;
 		hs ='';
-		hs+='background : #4fb5c2;';
+		hs+='background : #ffaa00;';
 		hs+='border : 0px solid #000000;';
 		hs+='border-radius : 25px;';
 		hs+='cursor : pointer;';
@@ -13177,10 +13178,10 @@ alert("The current view has been copied.");
 		me._thumbs_right.logicBlock_tabindex();
 		me._thumbs_right.logicBlock_cssclasses();
 		me.elementMouseOver['menu_center_button_bg']=false;
+		me._menu_center_button_bg.logicBlock_visible();
 		me._menu_center_button_bg.logicBlock_tabindex();
 		me._menu_center_icon.logicBlock_visible();
 		me._menu_center_icon_active.logicBlock_visible();
-		me._tip_pano.logicBlock_visible();
 		me.elementMouseOver['menu_center_button_bg_mobile']=false;
 		me._menu_center_button_bg_mobile.logicBlock_visible();
 		me._menu_center_button_bg_mobile.logicBlock_tabindex();
@@ -14054,8 +14055,8 @@ pano.on("modelloaded", () => { pano.setVariableValue("model_loading", false); })
 			me._thumbs_right.logicBlock_visible();
 			me._thumbs_right.logicBlock_tabindex();
 			me._thumbs_right.logicBlock_cssclasses();
+			me._menu_center_button_bg.logicBlock_visible();
 			me._menu_center_button_bg.logicBlock_tabindex();
-			me._tip_pano.logicBlock_visible();
 			me._menu_center_button_bg_mobile.logicBlock_visible();
 			me._menu_center_button_bg_mobile.logicBlock_tabindex();
 			if (player.transitionsDisabled) {
