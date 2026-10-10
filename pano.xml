@@ -320,7 +320,7 @@
     <animation animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0" useinautorotation="0"/>
   </panorama>
   <masternode>
-    <userdata author="" comment="" copyright="" description="" tags="" title="" uuid="{198564f3-b6b2-4bdd-aa1f-c6bf07448235}"/>
+    <userdata author="" comment="" copyright="" description="" tags="" title="" uuid="{5aa4db5f-f5cd-48b4-b8cc-0b6c8675e4c6}"/>
     <transition blendcolor="0x000000" blendtime="0.5" delay="previewtrack" enabled="1" softedge="0" type="mesh" zoomafterinfov="140" zoomafteroutfov="40" zoomfov="40" zoomin="7" zoomout="0" zoomoutpause="1" zoomspeed="2"/>
     <control contextfullscreen="0" contextprojections="0" contextvr="1" dblclickfullscreen="0" hideabout="1" invertcontrol="1" invertwheel="0" lockedkeyboard="0" lockedkeyboardzoom="0" lockedmouse="0" lockedwheel="0" rubberband="0" sensitivity="3" simulatemass="1" speedwheel="1" zoomcentercursor="1"/>
     <animationsequences>
